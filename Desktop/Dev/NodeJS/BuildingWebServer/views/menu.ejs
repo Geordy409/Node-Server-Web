@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Our Menu</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <h1>Our Menu</h1>
+
+    <ul class="menu-list">
+      <% for (let item of menuItems) { %>
+      <li>
+        <strong><%= item.name %></strong>
+        <span><%= item.description %></span>
+        <span>€<%= item.cost %></span>
+      </li>
+      <% } %>
+    </ul>
+
+    <footer>&copy; 2025 FAIR</footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<h1>Our Hours</h1>
+<div class="hours-container">
+  <% for(let day of days) { const hoursObj = operatingHour[day] ||
+  operatingHour['defaultHours']; const isToday = day === today; %>
+  <div class="day <%= isToday ? 'today' : '' %>">
+    <h3><%= day.toUpperCase() %></h3>
+    <p><strong>Open:</strong> <%= hoursObj.open %></p>
+    <p><strong>Closed:</strong> <%= hoursObj.close %></p>
+  </div>
+  <% } %>
+</div>
